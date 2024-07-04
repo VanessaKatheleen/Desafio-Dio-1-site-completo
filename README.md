@@ -5,9 +5,9 @@ Bem-vindo ao repositório do meu primeiro site criado como desafio de um projeto
 
 📝 Índice:
 
-Sobre o Projeto
-Funcionalidades
-Tecnologias Utilizadas
+Sobre o Projeto;
+Funcionalidades;
+Tecnologias Utilizadas;
 
 📋 Sobre o Projeto:
 
