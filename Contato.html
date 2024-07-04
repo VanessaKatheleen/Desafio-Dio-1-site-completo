@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos Globais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Faz com que o body se torne um container flexível */
+            min-height: 100vh;
+            height: 100%;
+            flex-direction: column; /* Coloca os elementos um abaixo do outro */
+            justify-content: center;
+            
+        }
+
+        /* Contêiner Principal */
+        .main-container {
+            display: flex; /* Faz com que seus filhos (.wrapper e .main-content) sejam organizados em uma linha flexível, um ao lado do outro */
+            flex-grow: 1;
+        }
+
+        /* Wrapper (SIDEBAR) Lateral Esquerda - Largura Fixa */
+        .wrapper {
+            width: 200px;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .wrapper nav a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+
+        /* Coluna Principal */
+        .main-content {
+            flex-grow: 1; /* Permite que o .main-content cresça e ocupe todo o espaço disponível ao lado da sidebar (.wrapper) */
+            display: flex;
+            flex-direction: column;
+        }
+
+        header, footer {
+            background-color: #f8f8f8;
+            padding: 10px;
+        }
+
+        header {
+            display: flex;
+            align-items: center; /* Alinha verticalmente os itens */
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            justify-content: space-between; /* Espaça os itens para que ocupem extremos opostos */
+        }
+        .header-left {
+            display: flex;
+            align-items: center; /* Alinha os itens horizontalmente ao centro */
+        }
+
+        .logo {
+            height: 100px; /* Altura da logo */
+            margin-right: 20px; /* Espaço entre a logo e o texto */
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column; /* Organiza o texto em uma coluna */
+            justify-content: center; /* Centraliza horizontalmente o texto, mas pode ser usado para centralizar tds itens do bloco */
+        }
+
+        .header-text h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .header-text p {
+            margin: 5px 0 0 0;
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Ajustes para dispositivos móveis */
+        @media (max-width: 600px) 
+        header {
+                flex-direction: column; /* Alinha verticalmente em telas pequenas */
+                text-align: center;
+        }
+
+        .logo {
+                margin-bottom: 10px; /* Espaço inferior entre a logo e o texto */
+                margin-right: 0;
+        }
+
+        .header-text {
+                align-items: center; /* Centraliza o texto */
+            
+        }
+
+        /* Estilo para o rodapé */
+        footer {
+            background-color: #f8f8f8;
+            text-align: center;
+            margin-top: auto;
+            width: 100%; /* Ocupa toda a largura disponível */
+            padding: 20px;
+        }
+
+        .contact-box {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 90%; /* Adiciona largura responsiva */
+            padding: 20px;
+            font-size: 16px;
+            text-align: center;
+            margin: 0 auto; /* Centraliza horizontalmente */
+        }
+
+        .contact-box h2 {
+            margin-bottom: 20px;
+            color: #007b5e;
+            align-items: center;
+        }
+
+        .contact-box p {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .contact-box a {
+            color: #007b5e;
+            text-decoration: none;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-box .social-media {
+            margin-top: 20px;
+        }
+
+        .contact-box .social-media a {
+            margin: 0 10px;
+            color: #333;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .contact-box .social-media a:hover {
+            color: #007b5e;
+        }
+
+        .contact-box .social-media a i {
+            margin-right: 5px;
+        }
+
+        .main {
+            padding: 20px;
+            align-items: center;
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            box-sizing: border-box;
+            justify-content:center
+            gap: 20px; /* Espaço entre os elementos */
+
+            
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Wrapper Lateral -->
+        <div class="wrapper">
+            <nav>
+                <h2>Menu</h2>
+                <a href="pagina inicial.html">Início</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="Contato.html">Contato</a>
+            </nav>
+        </div>
+
+        <!-- Coluna Principal -->
+        <div class="main-content">
+            <!-- Cabeçalho -->
+            <header>
+                <div class="header-left">
+                    <img src="logogatocachorro.png" class="logo" alt="Logo da clínica">
+                    <div class="header-text">
+                        <h1>Bem vindo à VetClin Veterinária!</h1>
+                        <p>Cuidar de quem nos dá tanto amor é a nossa maior missão.</p>
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="btn btn-outline-dark" onclick="irParaFormulario()">Agende uma consulta</button>
+             
+                <script>
+                   function irParaFormulario() {
+                   // Redirecionar para a página do formulário
+                   window.location.href = "formulario.html";
+                   }
+                </script>
+               </div>
+            </header>
+        
+            <div class="main">
+                <div class="contact-box">
+                    <h2>Contato e Endereço</h2>
+                    <p><strong>Clínica Veterinária VetClin</strong></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Rua das Flores, 123 - Centro, Macaé, Rio de Janeiro</p>
+                    <p><i class="fas fa-phone"></i> (11) 1234-5678</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:contato@vidaanimal.com.br">contato@vidaanimal.com.br</a></p>
+                <div class="social-media">
+                    <p>Siga-nos nas redes sociais:</p>
+                    <a href="https://www.facebook.com/clinica.vida.animal" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="https://www.instagram.com/clinica.vida.animal" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.twitter.com/clinica_vida" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                </div>
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14757.750071981425!2d-41.79116440321237!3d-22.37485793179731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1720070883944!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <h2>Localização da clínica!</h2>
+                </div>
+            </div> 
+            
+            <!-- Rodapé -->
+            <footer>
+                <p>&copy; 2024 VetClin. Todos os direitos reservados.</p>
+            </footer>
+        </div>
+    </div>
+
+<!-- Scripts Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
