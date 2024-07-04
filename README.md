@@ -1,6 +1,8 @@
 # Desafio-Dio-1-site-completo
 Clínica Veterinária VetClin
+
 Bem-vindo ao repositório do meu primeiro site criado como desafio de um projeto de curso.
+
 📝 Índice
 Sobre o Projeto
 Funcionalidades
