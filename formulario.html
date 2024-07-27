@@ -6,15 +6,27 @@
     <title>Formulário</title>
 
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Faz com que o body se torne um container flexível */
+            flex-direction: column; /* Coloca os elementos em coluna um embaixo do outro */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+            background-color: #f0f0f0;
+        }
         .container {
-            width: 50%;
-            max-width: 600px;
-            margin: 0 auto;
+            width: 80%; /* Define a largura do container */
+            max-width: 600px; /* Define uma largura máxima */
             padding: 60px;
             background-color: #f9f9f9;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             font-family: Arial, sans-serif;
+            margin-bottom: 20px; /* Define espaço entre o formuário e o rodapé */
+            margin-top: 20px; /* Define espaço no topo da página, entre a página e o formulário */
         }
 
         .container h2 {
@@ -44,7 +56,6 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-        
         }
 
         .form-group button:hover {
@@ -54,10 +65,8 @@
         .footer {
             background-color: #f8f8f8;
             text-align: center;
-            padding: 20px;
             margin-top: auto; /* Mantém o rodapé no final da página */
             font-family: Arial, sans-serif;
-            clear: both; /* Limpa floats anteriores para evitar sobreposição */
             width: 100%; /* Garante que o rodapé ocupe toda a largura */
         }
     </style>
@@ -105,23 +114,14 @@
             <div class="form-group">
                 <button type="submit">Marcar Horário</button>
             </div>
-            <div class="button">
-                <button onclick="irParaFormulario()">Voltar a página inicial</button>
-
-        <script>
-             function irParaFormulario() {
-            // Redirecionar para a página do formulário
-            window.location.href = "Página inicial.html";
-            }
-         </script>
-    </div>
-    </form>
+            <nav>
+                <a href="pagina inicial.html">Voltar à página inicial</a>
+            </nav>
+        </form>
     </div>
 
- <div class="footer">
-        <p>© 2024 VetClin. Todos os direitos reservados..</p>
- </div>
-
-
+    <div class="footer">
+        <p>© 2024 VetClin. Todos os direitos reservados.</p>
+    </div>
 </body>
 </html>
